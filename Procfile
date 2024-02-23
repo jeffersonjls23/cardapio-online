@@ -1,1 +1,1 @@
-web: python manage.py migrate && gunicorn cardapio:wsgi --log-file -
+web: gunicorn cardapio:wsgi --log-file -
