@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 
 
 CATEGORIES_LIST = (
@@ -19,3 +20,7 @@ class Food(models.Model):
     
     def __str__(self):
         return self.name
+
+
+class User(AbstractUser):
+    nick_name = models.CharField(default='nickname', max_length=20)
