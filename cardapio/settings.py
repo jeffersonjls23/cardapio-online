@@ -84,7 +84,7 @@ DATABASES = {
     }
 }
 
-DATABASE_URL = os.getenv("DATABASE_URL")
+DATABASE_URL = "postgresql://postgres:55A26GcC-2C1a33gD66514feG6e214F*@monorail.proxy.rlwy.net:33715/railway"
 if DATABASE_URL:
     DATABASES = {
         'default': dj_database_url.config(default=DATABASE_URL, conn_max_age=1800)
