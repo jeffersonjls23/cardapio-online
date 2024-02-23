@@ -25,14 +25,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 TOKEN_CSRF = os.getenv("TOKEN_CSRF")
 if TOKEN_CSRF:
     SECRET_KEY = TOKEN_CSRF
-    CSRF_TRUSTED_ORIGINS = ['https://cardapio-online-production.up.railway.app/']
+    CSRF_TRUSTED_ORIGINS = ['https://cardapio-online-production.up.railway.app']
 else:
     SECRET_KEY = 'django-insecure-klyt)r#6alqcmf&qng1x*qc(e)zab#f9d!_49*x%t_h)zib4na'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["cardapio-online-production.up.railway.app", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
