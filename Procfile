@@ -1,0 +1,1 @@
+web: python manage.py migrate && gunicord cardapio:wsgi --log-file

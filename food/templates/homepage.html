@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Cardápio Online
+{% endblock %}
+
+{% block content%}
+<div class="container mx-auto py-10">
+    <!-- Categoria Comidas -->
+    <div class="mb-8">
+        <h1 class="text-2xl font-bold text-white mb-4">Comidas</h1>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {% for food in object_list %}
+                {% if food.category == 'COMIDA' %}
+                    <div class="bg-gray-800 rounded-lg p-4">
+                        <img class="w-full h-48 object-cover" src="{{ food.thumb_img.url }}" alt="{{ food.name }}">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-yellow-300 mt-2">{{ food.name }}</h3>
+                            <p class="text-gray-400">{{ food.description }}</p>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="mb-8">
+        <h1 class="text-2xl font-bold text-white mb-4">Prato Principal</h1>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {% for food in object_list %}
+                {% if food.category == 'PRATO PRINCIPAL' %}
+                    <div class="bg-gray-800 rounded-lg p-4">
+                        <img class="w-full h-48 object-cover" src="{{ food.thumb_img.url }}" alt="{{ food.name }}">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-yellow-300 mt-2">{{ food.name }}</h3>
+                            <p class="text-gray-400">{{ food.description }}</p>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="mb-8">
+        <h1 class="text-2xl font-bold text-white mb-4">Bebidas</h1>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {% for food in object_list %}
+                {% if food.category == 'BEBIDA' %}
+                    <div class="bg-gray-800 rounded-lg p-4">
+                        <img class="w-full h-48 object-cover" src="{{ food.thumb_img.url }}" alt="{{ food.name }}">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-yellow-300 mt-2">{{ food.name }}</h3>
+                            <p class="text-gray-400">{{ food.description }}</p>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+     <div class="mb-8">
+        <h1 class="text-2xl font-bold text-white mb-4">Drinks</h1>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {% for food in object_list %}
+                {% if food.category == 'DRINKS' %}
+                    <div class="bg-gray-800 rounded-lg p-4">
+                        <img class="w-full h-48 object-cover" src="{{ food.thumb_img.url }}" alt="{{ food.name }}">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-yellow-300 mt-2">{{ food.name }}</h3>
+                            <p class="ext-gray-400">{{ food.description }}</p>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="mb-8">
+        <h1 class="text-2xl font-bold text-white mb-4">Sobremesas</h1>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {% for food in object_list %}
+                {% if food.category == 'SOBREMESA' %}
+                    <div class="bg-gray-800 rounded-lg p-4">
+                        <img class="w-full h-48 object-cover" src="{{ food.thumb_img.url }}" alt="{{ food.name }}">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-yellow-300 mt-2">{{ food.name }}</h3>
+                            <p class="ext-gray-400">{{ food.description }}</p>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
