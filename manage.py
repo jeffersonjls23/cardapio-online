@@ -7,9 +7,9 @@ import sys
 
 def main():
     """Run administrative tasks."""
-    user = os.getenv("USER_ADMIN")
-    email = os.getenv("EMAIL_ADMIN")
-    senha = os.getenv("SENHA_ADMIN")
+    user = 'admin'
+    email = 'admin@email.com'
+    senha = 'admin'
 
     usuarios = Usuario.objects.filter(email=email)
     if not usuarios:
