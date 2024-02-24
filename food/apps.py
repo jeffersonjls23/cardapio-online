@@ -1,5 +1,5 @@
 from django.apps import AppConfig
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import User
 import os
 
 
@@ -12,7 +12,7 @@ class FoodConfig(AppConfig):
         email = os.getenv("EMAIL_ADMIN")
         senha = os.getenv("SENHA_ADMIN")
 
-        usuarios = AbstractUser.objects.filter(email=email)
+        usuarios = User.objects.filter(email=email)
         if not usuarios:
-            AbstractUser.objects.create_superuser(username=user, email=email, password=senha,
-                                                  is_active=True, is_staff=True)
+            User.objects.create_superuser(username=user, email=email, password=senha,
+                                          is_active=True, is_staff=True)
