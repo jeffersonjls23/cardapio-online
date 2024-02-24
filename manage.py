@@ -1,20 +1,11 @@
 #!/usr/bin/env python
 """Django's command-line utility for administrative tasks."""
 import os
-from django.contrib.auth.models import AbstractUser
 import sys
 
 
 def main():
     """Run administrative tasks."""
-    user = 'admin'
-    email = 'admin@email.com'
-    senha = 'admin'
-
-    usuarios = AbstractUser.objects.filter(email=email)
-    if not usuarios:
-        AbstractUser.objects.create_superuser(username=user, email=email, password=senha,
-                                              is_active=True, is_staff=True)
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'cardapio.settings')
     try:
         from django.core.management import execute_from_command_line
