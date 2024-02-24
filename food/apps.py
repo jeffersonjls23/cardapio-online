@@ -1,5 +1,5 @@
 from django.apps import AppConfig
-from .models import Usuario
+# from .models import Usuario
 import os
 
 
@@ -12,7 +12,7 @@ class FoodConfig(AppConfig):
         email = os.getenv("EMAIL_ADMIN")
         senha = os.getenv("SENHA_ADMIN")
 
-        usuarios = Usuario.objects.filter(email=email)
+        # usuarios = Usuario.objects.filter(email=email)
         # if not usuarios:
         #     Usuario.objects.create_superuser(username=user, email=email, password=senha,
         #                                      is_active=True, is_staff=True)
