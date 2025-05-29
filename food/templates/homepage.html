@@ -6,176 +6,215 @@ Cardápio Online
 {% endblock %}
 
 {% block content%}
-<div class="container mx-auto py-10">
+<div class="container mx-auto py-10 px-4">
     <!-- Categoria Comidas -->
-    <div class="mb-8">
-        <h1 class="text-2xl font-bold text-white mb-4">Comidas</h1>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="bg-gray-800 rounded-lg p-4">
-                <img class="w-full h-48 object-cover" src="{% static 'images/linguica-acebolada.jpg' %}" alt="Linguiça">
+    <section class="mb-12">
+        <h1 class="text-3xl font-bold text-yellow-400 mb-6 border-b border-yellow-400 pb-2">Comidas</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Linguiça Acebolada -->
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <img class="w-full h-48 object-cover" src="{% static 'images/linguica-acebolada.jpg' %}" alt="Linguiça Acebolada">
                 <div class="p-4">
-                    <h3 class="text-xl font-semibold text-yellow-300 mt-2">Linguiça Acebolada</h3>
-                    <p class="text-gray-400">Linguiça acebolada</p>
+                    <h3 class="text-xl font-semibold text-yellow-300">Linguiça Acebolada</h3>
+                    <p class="text-gray-400 mt-2">Deliciosa linguiça grelhada com cebolas caramelizadas</p>
+                    <p class="text-yellow-400 font-medium mt-2">R$ 25,00</p>
                 </div>
             </div>
 
-            <div class="bg-gray-800 rounded-lg p-4">
+            <!-- Batata Frita -->
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <img class="w-full h-48 object-cover" src="{% static 'images/batata_frita.png' %}" alt="Batata Frita">
                 <div class="p-4">
-                    <h3 class="text-xl font-semibold text-yellow-300 mt-2">Batata Frita</h3>
-                    <p class="text-gray-400">Batata frita com cebola e bacon</p>
+                    <h3 class="text-xl font-semibold text-yellow-300">Batata Frita</h3>
+                    <p class="text-gray-400 mt-2">Crocantes batatas fritas com cebola e bacon</p>
+                    <p class="text-yellow-400 font-medium mt-2">R$ 18,00</p>
                 </div>
             </div>
 
-            <div class="bg-gray-800 rounded-lg p-4">
+            <!-- Frango a Passarinho -->
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <img class="w-full h-48 object-cover" src="{% static 'images/frango-a-passarinho.jpg' %}" alt="Frango a Passarinho">
                 <div class="p-4">
-                    <h3 class="text-xl font-semibold text-yellow-300 mt-2">Frango a Passarinho</h3>
-                    <p class="text-gray-400"></p>
+                    <h3 class="text-xl font-semibold text-yellow-300">Frango a Passarinho</h3>
+                    <p class="text-gray-400 mt-2">Tradicional frango em pedaços temperado e frito</p>
+                    <p class="text-yellow-400 font-medium mt-2">R$ 32,00</p>
                 </div>
             </div>
 
-            <div class="bg-gray-800 rounded-lg p-4">
+            <!-- Moela -->
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <img class="w-full h-48 object-cover" src="{% static 'images/moela.jpg' %}" alt="Moela">
                 <div class="p-4">
-                    <h3 class="text-xl font-semibold text-yellow-300 mt-2">Moela</h3>
-                    <p class="text-gray-400">Moela ao vinho com pão frances</p>
+                    <h3 class="text-xl font-semibold text-yellow-300">Moela</h3>
+                    <p class="text-gray-400 mt-2">Moela ao vinho servida com pão francês</p>
+                    <p class="text-yellow-400 font-medium mt-2">R$ 28,00</p>
                 </div>
             </div>
 
-            <div class="bg-gray-800 rounded-lg p-4">
-                <img class="w-full h-48 object-cover" src="{% static 'images/contrafile.png' %}" alt="Moela">
+            <!-- Contrafilé -->
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <img class="w-full h-48 object-cover" src="{% static 'images/contrafile.png' %}" alt="Contrafilé">
                 <div class="p-4">
-                    <h3 class="text-xl font-semibold text-yellow-300 mt-2">Contrafilé</h3>
-                    <p class="text-gray-400"></p>
+                    <h3 class="text-xl font-semibold text-yellow-300">Contrafilé</h3>
+                    <p class="text-gray-400 mt-2">Suculento contrafilé grelhado na chapa</p>
+                    <p class="text-yellow-400 font-medium mt-2">R$ 45,00</p>
                 </div>
             </div>
 
-            <div class="bg-gray-800 rounded-lg p-4">
+            <!-- Pastel -->
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <img class="w-full h-48 object-cover" src="{% static 'images/pastel.jpg' %}" alt="Pastel">
                 <div class="p-4">
-                    <h3 class="text-xl font-semibold text-yellow-300 mt-2">Pastel</h3>
-                    <p class="text-gray-400">Pastel de carne ou queijo</p>
+                    <h3 class="text-xl font-semibold text-yellow-300">Pastel</h3>
+                    <p class="text-gray-400 mt-2">Pastel crocante de carne ou queijo</p>
+                    <p class="text-yellow-400 font-medium mt-2">R$ 12,00 (unidade)</p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="mb-8">
-        <h1 class="text-2xl font-bold text-white mb-4">Prato Principal</h1>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="bg-gray-800 rounded-lg p-4">
-                <img class="w-full h-48 object-cover" src="{% static 'images/arroz_e_tropeiro.png' %}" alt="Arro e Tropeiro">
+    <!-- Prato Principal -->
+    <section class="mb-12">
+        <h1 class="text-3xl font-bold text-yellow-400 mb-6 border-b border-yellow-400 pb-2">Pratos Principais</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Arroz e Tropeiro -->
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <img class="w-full h-48 object-cover" src="{% static 'images/arroz_e_tropeiro.png' %}" alt="Arroz e Tropeiro">
                 <div class="p-4">
-                    <h3 class="text-xl font-semibold text-yellow-300 mt-2">Arroz e Tropeiro</h3>
-                    <p class="text-gray-400">Arroz com feijão tropeiro</p>
+                    <h3 class="text-xl font-semibold text-yellow-300">Arroz e Tropeiro</h3>
+                    <p class="text-gray-400 mt-2">Arroz com feijão tropeiro e torresmo</p>
+                    <p class="text-yellow-400 font-medium mt-2">R$ 35,00</p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="mb-8">
-        <h1 class="text-2xl font-bold text-white mb-4">Bebidas</h1>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="bg-gray-800 rounded-lg p-4">
+    <!-- Bebidas -->
+    <section class="mb-12">
+        <h1 class="text-3xl font-bold text-yellow-400 mb-6 border-b border-yellow-400 pb-2">Bebidas</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Cerveja -->
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <img class="w-full h-48 object-cover" src="{% static 'images/beer.jpg' %}" alt="Cerveja">
                 <div class="p-4">
-                    <h3 class="text-xl font-semibold text-yellow-300 mt-2">Cerveja</h3>
-                    <p class="text-gray-400">Cerveja Heineken 350 ml</p>
+                    <h3 class="text-xl font-semibold text-yellow-300">Cerveja Heineken</h3>
+                    <p class="text-gray-400 mt-2">Long neck 350ml gelada</p>
+                    <p class="text-yellow-400 font-medium mt-2">R$ 10,00</p>
                 </div>
             </div>
 
-            <div class="bg-gray-800 rounded-lg p-4">
+            <!-- Água -->
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <img class="w-full h-48 object-cover" src="{% static 'images/glass_water.jpg' %}" alt="Água">
                 <div class="p-4">
-                    <h3 class="text-xl font-semibold text-yellow-300 mt-2">Água</h3>
-                    <p class="text-gray-400">Água mineral com ou sem gás</p>
+                    <h3 class="text-xl font-semibold text-yellow-300">Água Mineral</h3>
+                    <p class="text-gray-400 mt-2">Com ou sem gás - 500ml</p>
+                    <p class="text-yellow-400 font-medium mt-2">R$ 5,00</p>
                 </div>
             </div>
 
-            <div class="bg-gray-800 rounded-lg p-4">
-                <img class="w-full h-48 object-cover" src="{% static 'images/suco-de-uva.jpg' %}" alt="Suco de uva">
+            <!-- Sucos -->
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <img class="w-full h-48 object-cover" src="{% static 'images/suco-de-uva.jpg' %}" alt="Suco de Uva">
                 <div class="p-4">
-                    <h3 class="text-xl font-semibold text-yellow-300 mt-2">Suco de Uva</h3>
-                    <p class="text-gray-400">Suco de uva natural</p>
+                    <h3 class="text-xl font-semibold text-yellow-300">Suco de Uva</h3>
+                    <p class="text-gray-400 mt-2">Natural - 500ml</p>
+                    <p class="text-yellow-400 font-medium mt-2">R$ 12,00</p>
                 </div>
             </div>
 
-            <div class="bg-gray-800 rounded-lg p-4">
-                <img class="w-full h-48 object-cover" src="{% static 'images/orange-juice-scaled.jpg' %}" alt="Suco de laranja">
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <img class="w-full h-48 object-cover" src="{% static 'images/orange-juice-scaled.jpg' %}" alt="Suco de Laranja">
                 <div class="p-4">
-                    <h3 class="text-xl font-semibold text-yellow-300 mt-2">Suco de Laranja</h3>
-                    <p class="text-gray-400">Suco de laranja natural</p>
+                    <h3 class="text-xl font-semibold text-yellow-300">Suco de Laranja</h3>
+                    <p class="text-gray-400 mt-2">Natural - 500ml</p>
+                    <p class="text-yellow-400 font-medium mt-2">R$ 12,00</p>
                 </div>
             </div>
 
-            <div class="bg-gray-800 rounded-lg p-4">
-                <img class="w-full h-48 object-cover" src="{% static 'images/coke.jpg' %}" alt="Refrigerante">
+            <!-- Refrigerantes -->
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <img class="w-full h-48 object-cover" src="{% static 'images/coke.jpg' %}" alt="Refrigerantes">
                 <div class="p-4">
-                    <h3 class="text-xl font-semibold text-yellow-300 mt-2">Refrigerantes</h3>
-                    <p class="text-gray-400">Coca-Cola, Pepsi, Sprite</p>
+                    <h3 class="text-xl font-semibold text-yellow-300">Refrigerantes</h3>
+                    <p class="text-gray-400 mt-2">Coca-Cola, Pepsi, Sprite - 350ml</p>
+                    <p class="text-yellow-400 font-medium mt-2">R$ 8,00</p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-     <div class="mb-8">
-        <h1 class="text-2xl font-bold text-white mb-4">Drinks</h1>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="bg-gray-800 rounded-lg p-4">
-                <img class="w-full h-48 object-cover" src="{% static 'images/Moscow-mule-2.jpg' %}" alt="Moscow mule">
+    <!-- Drinks -->
+    <section class="mb-12">
+        <h1 class="text-3xl font-bold text-yellow-400 mb-6 border-b border-yellow-400 pb-2">Drinks</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Moscow Mule -->
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <img class="w-full h-48 object-cover" src="{% static 'images/Moscow-mule-2.jpg' %}" alt="Moscow Mule">
                 <div class="p-4">
-                    <h3 class="text-xl font-semibold text-yellow-300 mt-2">Moscow Mule</h3>
-                    <p class="text-gray-400">---</p>
+                    <h3 class="text-xl font-semibold text-yellow-300">Moscow Mule</h3>
+                    <p class="text-gray-400 mt-2">Vodka, gengibre, limão e água com gás</p>
+                    <p class="text-yellow-400 font-medium mt-2">R$ 28,00</p>
                 </div>
             </div>
 
-            <div class="bg-gray-800 rounded-lg p-4">
-                <img class="w-full h-48 object-cover" src="{% static 'images/aperol.png' %}" alt="Moscow mule">
+            <!-- Aperol -->
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <img class="w-full h-48 object-cover" src="{% static 'images/aperol.png' %}" alt="Aperol Spritz">
                 <div class="p-4">
-                    <h3 class="text-xl font-semibold text-yellow-300 mt-2">Aperol</h3>
-                    <p class="text-gray-400">---</p>
+                    <h3 class="text-xl font-semibold text-yellow-300">Aperol Spritz</h3>
+                    <p class="text-gray-400 mt-2">Aperol, prosecco e água com gás</p>
+                    <p class="text-yellow-400 font-medium mt-2">R$ 30,00</p>
                 </div>
             </div>
 
-            <div class="bg-gray-800 rounded-lg p-4">
-                <img class="w-full h-48 object-cover" src="{% static 'images/caipirinha.png' %}" alt="Moscow mule">
+            <!-- Caipirinha -->
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <img class="w-full h-48 object-cover" src="{% static 'images/caipirinha.png' %}" alt="Caipirinha">
                 <div class="p-4">
-                    <h3 class="text-xl font-semibold text-yellow-300 mt-2">Caipirinha</h3>
-                    <p class="text-gray-400">---</p>
+                    <h3 class="text-xl font-semibold text-yellow-300">Caipirinha</h3>
+                    <p class="text-gray-400 mt-2">Tradicional - pode ser de cachaça ou vodka</p>
+                    <p class="text-yellow-400 font-medium mt-2">R$ 25,00</p>
                 </div>
             </div>
 
-            <div class="bg-gray-800 rounded-lg p-4">
-                <img class="w-full h-48 object-cover" src="{% static 'images/mojito.jpg' %}" alt="Moscow mule">
+            <!-- Mojito -->
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <img class="w-full h-48 object-cover" src="{% static 'images/mojito.jpg' %}" alt="Mojito">
                 <div class="p-4">
-                    <h3 class="text-xl font-semibold text-yellow-300 mt-2">Mojito</h3>
-                    <p class="text-gray-400">---</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="mb-8">
-        <h1 class="text-2xl font-bold text-white mb-4">Sobremesas</h1>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="bg-gray-800 rounded-lg p-4">
-                <img class="w-full h-48 object-cover" src="{% static 'images/goiabada.jpg' %}" alt="Moela">
-                <div class="p-4">
-                    <h3 class="text-xl font-semibold text-yellow-300 mt-2">Goiabada</h3>
-                    <p class="text-gray-400">Goiabada com queijo</p>
-                </div>
-            </div>
-
-            <div class="bg-gray-800 rounded-lg p-4">
-                <img class="w-full h-48 object-cover" src="{% static 'images/doce_de_leite.jpg' %}" alt="Moela">
-                <div class="p-4">
-                    <h3 class="text-xl font-semibold text-yellow-300 mt-2">Doce de Leite</h3>
-                    <p class="text-gray-400">Doce de Leite com queijo</p>
+                    <h3 class="text-xl font-semibold text-yellow-300">Mojito</h3>
+                    <p class="text-gray-400 mt-2">Rum, hortelã, limão e água com gás</p>
+                    <p class="text-yellow-400 font-medium mt-2">R$ 28,00</p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Sobremesas -->
+    <section class="mb-12">
+        <h1 class="text-3xl font-bold text-yellow-400 mb-6 border-b border-yellow-400 pb-2">Sobremesas</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Goiabada -->
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <img class="w-full h-48 object-cover" src="{% static 'images/goiabada.jpg' %}" alt="Goiabada">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-yellow-300">Goiabada com Queijo</h3>
+                    <p class="text-gray-400 mt-2">Clássica combinação de goiabada e queijo mineiro</p>
+                    <p class="text-yellow-400 font-medium mt-2">R$ 18,00</p>
+                </div>
+            </div>
+
+            <!-- Doce de Leite -->
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <img class="w-full h-48 object-cover" src="{% static 'images/doce_de_leite.jpg' %}" alt="Doce de Leite">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-yellow-300">Doce de Leite com Queijo</h3>
+                    <p class="text-gray-400 mt-2">Doce de leite caseiro com queijo mineiro</p>
+                    <p class="text-yellow-400 font-medium mt-2">R$ 18,00</p>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
 
 {% endblock %}
